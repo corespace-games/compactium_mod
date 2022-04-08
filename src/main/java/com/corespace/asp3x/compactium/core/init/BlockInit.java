@@ -32,6 +32,13 @@ public class BlockInit {
                     .sound(SoundType.METAL)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
 
+    public static final RegistryObject<Block> COMPACTIUM_ORE = register("compactium_ore", () ->
+            new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5f)
+                    .sound(SoundType.STONE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
+
     /* Register Logic for the Block and Block Item */
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
         return BLOCKS.register(name, block);

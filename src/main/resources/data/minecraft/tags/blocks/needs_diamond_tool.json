@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "compactium:compactium_ore",
     "compactium:compactium_block"
   ]
 }

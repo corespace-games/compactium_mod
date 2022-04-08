@@ -1,5 +1,6 @@
 {
   "itemGroup.compactium": "Compactium Mod",
   "item.compactium.compactium_ingot": "Compactium Ingot",
-  "block.compactium.compactium_block": "Compactium Block"
+  "block.compactium.compactium_block": "Compactium Block",
+  "block.compactium.compactium_ore": "Compactium Ore"
 }

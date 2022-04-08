@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "compactium:blocks/compactium_block"
+    "all": "compactium:block/compactium_block"
   }
 }

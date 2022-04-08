@@ -8,15 +8,17 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.function.Supplier;
+
 public class ItemInit {
     // create a item register variable
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Compactium.MOD_ID);
 
-    public static final RegistryObject<Item> COMPACTIUM_ITEM = ITEMS.register("compactium_item",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+    public static final RegistryObject<Item> COMPACTIUM_ITEM = register("compactium_ingot",
+            () -> new Item(new Item.Properties()
+                    .tab(Compactium.COMPACTIUM_TAB)));
 
-
-    /* Init Block Items */
-    public static final RegistryObject<BlockItem> COMPACTIUM_BLOCK_ITEM = ITEMS.register("compactium_block_item",
-            () -> new BlockItem(BlockInit.COMPACTIUM_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
+        return ITEMS.register(name, item);
+    }
 }

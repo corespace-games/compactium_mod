@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "compactium:block/compactium_block" }
+    "": {
+      "model": "compactium:block/compactium_block"
+    }
   }
 }

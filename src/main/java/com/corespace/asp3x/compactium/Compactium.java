@@ -1,5 +1,6 @@
 package com.corespace.asp3x.compactium;
 
+import com.corespace.asp3x.compactium.core.init.BlockInit;
 import com.corespace.asp3x.compactium.core.init.ItemInit;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,7 +23,8 @@ public class Compactium {
     public Compactium() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // register all items
+        // register mod items
+        BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
 
         // Register ourselves for server and other game events we are interested in

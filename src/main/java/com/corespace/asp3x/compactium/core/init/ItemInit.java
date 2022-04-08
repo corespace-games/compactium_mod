@@ -1,6 +1,7 @@
 package com.corespace.asp3x.compactium.core.init;
 
 import com.corespace.asp3x.compactium.Compactium;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,4 +14,9 @@ public class ItemInit {
 
     public static final RegistryObject<Item> COMPACTIUM_ITEM = ITEMS.register("compactium_item",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+
+
+    /* Init Block Items */
+    public static final RegistryObject<BlockItem> COMPACTIUM_BLOCK_ITEM = ITEMS.register("compactium_block_item",
+            () -> new BlockItem(BlockInit.COMPACTIUM_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 }

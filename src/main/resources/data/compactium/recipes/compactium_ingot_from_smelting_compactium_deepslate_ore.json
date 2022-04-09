@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "compactium_ingot",
+  "ingredient": {
+    "item": "compactium:compactium_deepslate_ore"
+  },
+  "result": "compactium:compactium_ingot",
+  "experience": 0.3,
+  "cookingtime": 300
+}

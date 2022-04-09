@@ -34,7 +34,7 @@ public class BlockInit {
     public static final RegistryObject<Block> COMPACTIUM_DEEPSLATE_ORE = register("compactium_deepslate_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
                     .requiresCorrectToolForDrops()
-                    .strength(3.5f)
+                    .strength(4.5f)
                     .sound(SoundType.DEEPSLATE)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
 

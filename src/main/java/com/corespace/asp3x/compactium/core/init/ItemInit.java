@@ -18,6 +18,14 @@ public class ItemInit {
             () -> new Item(new Item.Properties()
                     .tab(Compactium.COMPACTIUM_TAB)));
 
+    public static final RegistryObject<Item> COMPACTIUM_NUGGET = register("compactium_nugget",
+            () -> new Item(new Item.Properties()
+                    .tab(Compactium.COMPACTIUM_TAB)));
+
+    public static final RegistryObject<Item> COMPACTIUM_RAW = register("compactium_raw",
+            () -> new Item(new Item.Properties()
+                    .tab(Compactium.COMPACTIUM_TAB)));
+
     private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);
     }

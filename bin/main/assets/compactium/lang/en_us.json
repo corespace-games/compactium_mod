@@ -1,0 +1,9 @@
+{
+  "itemGroup.compactium": "Compactium Mod",
+  "item.compactium.compactium_raw": "Raw Compactium",
+  "item.compactium.compactium_ingot": "Compactium Ingot",
+  "item.compactium.compactium_nugget": "Compactium Nugget",
+  "block.compactium.compactium_ore": "Compactium Ore",
+  "block.compactium.compactium_deepslate_ore": "Deepslate Compactium Ore",
+  "block.compactium.compactium_block": "Compactium Block"
+}

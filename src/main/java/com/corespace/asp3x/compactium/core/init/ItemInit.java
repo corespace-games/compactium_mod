@@ -14,15 +14,15 @@ public class ItemInit {
     // create a item register variable
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Compactium.MOD_ID);
 
+    public static final RegistryObject<Item> COMPACTIUM_RAW = register("compactium_raw",
+            () -> new Item(new Item.Properties()
+                    .tab(Compactium.COMPACTIUM_TAB)));
+
     public static final RegistryObject<Item> COMPACTIUM_ITEM = register("compactium_ingot",
             () -> new Item(new Item.Properties()
                     .tab(Compactium.COMPACTIUM_TAB)));
 
     public static final RegistryObject<Item> COMPACTIUM_NUGGET = register("compactium_nugget",
-            () -> new Item(new Item.Properties()
-                    .tab(Compactium.COMPACTIUM_TAB)));
-
-    public static final RegistryObject<Item> COMPACTIUM_RAW = register("compactium_raw",
             () -> new Item(new Item.Properties()
                     .tab(Compactium.COMPACTIUM_TAB)));
 

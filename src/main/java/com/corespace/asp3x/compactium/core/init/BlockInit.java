@@ -24,19 +24,25 @@ public class BlockInit {
     public static final DeferredRegister<Item> ITEMS = ItemInit.ITEMS;
 
     /* Register Blocks here */
-
-    public static final RegistryObject<Block> COMPACTIUM_BLOCK = register("compactium_block", () ->
-            new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
-                    .requiresCorrectToolForDrops()
-                    .strength(3.0f)
-                    .sound(SoundType.METAL)),
-            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
-
-    public static final RegistryObject<Block> COMPACTIUM_ORE = register("compactium_ore", () ->
-            new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
+    public static final RegistryObject<Block> COMPACTIUM_ORE = register("compactium_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
                     .requiresCorrectToolForDrops()
                     .strength(3.5f)
                     .sound(SoundType.STONE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
+
+    public static final RegistryObject<Block> COMPACTIUM_DEEPSLATE_ORE = register("compactium_deepslate_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5f)
+                    .sound(SoundType.DEEPSLATE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
+
+    public static final RegistryObject<Block> COMPACTIUM_BLOCK = register("compactium_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0f)
+                    .sound(SoundType.METAL)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
 
     /* Register Logic for the Block and Block Item */

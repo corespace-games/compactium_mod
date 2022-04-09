@@ -12,7 +12,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'com.corespace.asp3x'
-version = '1.0-SNAPSHOT'
+version = '1.2-SNAPSHOT'
 
 java {
     archivesBaseName = 'compactium'

@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("compactium")
@@ -26,7 +27,7 @@ public class Compactium {
     public static final CreativeModeTab COMPACTIUM_TAB = new CreativeModeTab(MOD_ID) {
         @Override
         @OnlyIn(Dist.CLIENT)
-        public ItemStack makeIcon() {
+        public @NotNull ItemStack makeIcon() {
             return new ItemStack(ItemInit.COMPACTIUM_ITEM.get());
         }
     };
@@ -41,12 +42,5 @@ public class Compactium {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
-
-    //@SubscribeEvent
-    //public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
-    //   BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-    //        event.getRegistry().register(new BlockItem(block, new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
-    //    });
-    //}
 
 }

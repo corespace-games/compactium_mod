@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "compactium_ingot",
+  "ingredient": {
+    "item": "compactium:compactium_raw"
+  },
+  "result": "compactium:compactium_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

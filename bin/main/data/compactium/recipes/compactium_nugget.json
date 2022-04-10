@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "compactium:compactium_ingot"
+    }
+  ],
+  "result": {
+    "item": "compactium:compactium_nugget",
+    "count": 9
+  }
+}

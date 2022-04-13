@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "compactium_ingot",
+  "ingredient": {
+    "item": "compactium:compactium_ore"
+  },
+  "result": "compactium:compactium_ingot",
+  "experience": 0.5,
+  "cookingtime": 200
+}

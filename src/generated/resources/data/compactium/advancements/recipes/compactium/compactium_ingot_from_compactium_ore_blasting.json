@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "compactium:compactium_ingot_from_compactium_ore_blasting"
+    ]
+  },
+  "criteria": {
+    "has_compactium_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "compactium:compactium_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "compactium:compactium_ingot_from_compactium_ore_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_compactium_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

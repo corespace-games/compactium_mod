@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "compactium:compactium_ore"
+  },
+  "result": "compactium:compactium_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

@@ -3,6 +3,7 @@
   "values": [
     "compactium:compactium_ore",
     "compactium:compactium_deepslate_ore",
-    "compactium:compactium_block"
+    "compactium:compactium_block",
+    "compactium:compacted_cobblestone"
   ]
 }

@@ -7,6 +7,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
@@ -27,8 +28,26 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_" + Objects.requireNonNull(BlockInit.COMPACTIUM_BLOCK.get().getRegistryName()).getPath(),
                         has(BlockInit.COMPACTIUM_BLOCK.get().asItem()))
                 .save(consumer, new ResourceLocation(Compactium.MOD_ID,
-                        Objects.requireNonNull(BlockInit.COMPACTIUM_BLOCK.get().asItem().getRegistryName()).getPath() + "_from_" +
+                        Objects.requireNonNull(BlockInit.COMPACTIUM_BLOCK.get().getRegistryName()).getPath() + "_from_" +
                                 Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath()));
+
+        ShapedRecipeBuilder.shaped(ItemInit.COMPACTIUM_INGOT.get())
+                .define('#', ItemInit.COMPACTIUM_NUGGET.get())
+                .pattern("###").pattern("###").pattern("###")
+                .unlockedBy("has_" + Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath(),
+                        has(ItemInit.COMPACTIUM_INGOT.get()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath() + "_from_" +
+                                Objects.requireNonNull(ItemInit.COMPACTIUM_NUGGET.get().getRegistryName()).getPath()));
+
+        ShapedRecipeBuilder.shaped(BlockInit.COMPACTED_COBBLESTONE.get().asItem())
+                .define('#', Blocks.COBBLESTONE.asItem())
+                .pattern("###").pattern("###").pattern("###")
+                .unlockedBy("has_" + Objects.requireNonNull(BlockInit.COMPACTED_COBBLESTONE.get().getRegistryName()).getPath(),
+                        has(BlockInit.COMPACTED_COBBLESTONE.get().asItem()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Objects.requireNonNull(BlockInit.COMPACTED_COBBLESTONE.get().getRegistryName()).getPath() + "_from_" +
+                                Objects.requireNonNull(Blocks.COBBLESTONE.getRegistryName()).getPath()));
 
         // Crafting Recipes Shapeless
         ShapelessRecipeBuilder.shapeless(ItemInit.COMPACTIUM_INGOT.get(), 9)
@@ -47,14 +66,13 @@ public class ModRecipeProvider extends RecipeProvider {
                         Objects.requireNonNull(ItemInit.COMPACTIUM_NUGGET.get().getRegistryName()).getPath() + "_from_" +
                                 Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath()));
 
-        ShapelessRecipeBuilder.shapeless(ItemInit.COMPACTIUM_INGOT.get(), 1)
-                .requires(ItemInit.COMPACTIUM_NUGGET.get())
-                .unlockedBy("has_" + Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath(),
-                        has(ItemInit.COMPACTIUM_INGOT.get()))
+        ShapelessRecipeBuilder.shapeless(Blocks.COBBLESTONE.asItem(), 9)
+                .requires(BlockInit.COMPACTED_COBBLESTONE.get().asItem())
+                .unlockedBy("has_" + Blocks.COBBLESTONE.getRegistryName().getPath(),
+                        has(Blocks.COBBLESTONE.asItem()))
                 .save(consumer, new ResourceLocation(Compactium.MOD_ID,
-                        Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath() + "_from_" +
-                                Objects.requireNonNull(ItemInit.COMPACTIUM_NUGGET.get().getRegistryName()).getPath()));
-
+                        Blocks.COBBLESTONE.getRegistryName().getPath() + "_from_" +
+                                Objects.requireNonNull(BlockInit.COMPACTED_COBBLESTONE.get().getRegistryName()).getPath()));
 
         // Smelting Recipes
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(BlockInit.COMPACTIUM_ORE.get().asItem()),

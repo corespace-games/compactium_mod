@@ -39,13 +39,21 @@ public class ModRecipeProvider extends RecipeProvider {
                         Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath() + "_from_" +
                                 BlockInit.COMPACTIUM_BLOCK.get().asItem()));
 
-        ShapelessRecipeBuilder.shapeless(ItemInit.COMPACTIUM_NUGGET.get(), 1)
+        ShapelessRecipeBuilder.shapeless(ItemInit.COMPACTIUM_NUGGET.get(), 9)
                 .requires(ItemInit.COMPACTIUM_INGOT.get())
                 .unlockedBy("has_" + Objects.requireNonNull(ItemInit.COMPACTIUM_NUGGET.get().getRegistryName()).getPath(),
                         has(ItemInit.COMPACTIUM_NUGGET.get()))
                 .save(consumer, new ResourceLocation(Compactium.MOD_ID,
                         Objects.requireNonNull(ItemInit.COMPACTIUM_NUGGET.get().getRegistryName()).getPath() + "_from_" +
                                 Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath()));
+
+        ShapelessRecipeBuilder.shapeless(ItemInit.COMPACTIUM_INGOT.get(), 1)
+                .requires(ItemInit.COMPACTIUM_NUGGET.get())
+                .unlockedBy("has_" + Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath(),
+                        has(ItemInit.COMPACTIUM_INGOT.get()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Objects.requireNonNull(ItemInit.COMPACTIUM_INGOT.get().getRegistryName()).getPath() + "_from_" +
+                                Objects.requireNonNull(ItemInit.COMPACTIUM_NUGGET.get().getRegistryName()).getPath()));
 
 
         // Smelting Recipes

@@ -1,9 +1,11 @@
 package com.corespace.asp3x.compactium.core.init;
 
 import com.corespace.asp3x.compactium.Compactium;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -25,17 +27,17 @@ public class BlockInit {
 
     /* Register Blocks here */
     public static final RegistryObject<Block> COMPACTIUM_ORE = register("compactium_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
                     .requiresCorrectToolForDrops()
                     .strength(3.5f)
-                    .sound(SoundType.STONE)),
+                    .sound(SoundType.STONE), UniformInt.of(3, 7)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
 
     public static final RegistryObject<Block> COMPACTIUM_DEEPSLATE_ORE = register("compactium_deepslate_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
                     .requiresCorrectToolForDrops()
                     .strength(4.5f)
-                    .sound(SoundType.DEEPSLATE)),
+                    .sound(SoundType.DEEPSLATE), UniformInt.of(3, 7)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
 
     public static final RegistryObject<Block> COMPACTIUM_BLOCK = register("compactium_block",

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "compactium:compacted_cobblestone_from_cobblestone"
+    ]
+  },
+  "criteria": {
+    "has_compacted_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "compactium:compacted_cobblestone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "compactium:compacted_cobblestone_from_cobblestone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_compacted_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

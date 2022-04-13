@@ -28,7 +28,7 @@ public class Compactium {
         @Override
         @OnlyIn(Dist.CLIENT)
         public @NotNull ItemStack makeIcon() {
-            return new ItemStack(ItemInit.COMPACTIUM_ITEM.get());
+            return new ItemStack(ItemInit.COMPACTIUM_INGOT.get());
         }
     };
 

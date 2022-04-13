@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "compactium:compactium_ore",
+    "compactium:compactium_deepslate_ore"
+  ]
+}

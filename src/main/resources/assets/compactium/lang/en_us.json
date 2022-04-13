@@ -5,5 +5,6 @@
   "item.compactium.compactium_nugget": "Compactium Nugget",
   "block.compactium.compactium_ore": "Compactium Ore",
   "block.compactium.compactium_deepslate_ore": "Deepslate Compactium Ore",
-  "block.compactium.compactium_block": "Compactium Block"
+  "block.compactium.compactium_block": "Compactium Block",
+  "block.compactium.compacted_cobblestone": "Compacted Cobblestone"
 }

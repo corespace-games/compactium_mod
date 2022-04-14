@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "compactium:compacted_cobblestone"
+    "compactium:compacted_cobblestone",
+    "compactium:compacted_deepslate",
+    "compactium:compacted_cobbled_deepslate"
   ]
 }

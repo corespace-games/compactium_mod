@@ -4,6 +4,8 @@
     "compactium:compactium_ore",
     "compactium:compactium_deepslate_ore",
     "compactium:compactium_block",
-    "compactium:compacted_cobblestone"
+    "compactium:compacted_cobblestone",
+    "compactium:compacted_deepslate",
+    "compactium:compacted_cobbled_deepslate"
   ]
 }

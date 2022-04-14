@@ -22,8 +22,10 @@ public class ModDeDeProvider extends LanguageProvider{
 
         // Blocks
         add(BlockInit.COMPACTIUM_ORE.get(), "Compactium Erz");
-        add(BlockInit.COMPACTIUM_DEEPSLATE_ORE.get(), "Compactium Deepslate Erz");
+        add(BlockInit.COMPACTIUM_DEEPSLATE_ORE.get(), "Compactium Tiefenschiefer Erz");
         add(BlockInit.COMPACTIUM_BLOCK.get(), "Compactium Block");
         add(BlockInit.COMPACTED_COBBLESTONE.get(), "Verdichteter Bruchstein");
+        add(BlockInit.COMPACTED_DEEPSLATE.get(), "Verdichtete Tiefenschiefer");
+        add(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get(), "Verdichtete Bruchstein Tiefenschiefer");
     }
 }

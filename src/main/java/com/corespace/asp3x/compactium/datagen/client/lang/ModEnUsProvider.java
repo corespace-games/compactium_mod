@@ -28,5 +28,7 @@ public class ModEnUsProvider extends LanguageProvider {
         add(BlockInit.COMPACTIUM_DEEPSLATE_ORE.get(), "Compactium Deepslate Ore");
         add(BlockInit.COMPACTIUM_BLOCK.get(), "Compactium Block");
         add(BlockInit.COMPACTED_COBBLESTONE.get(), "Compacted Cobblestone");
+        add(BlockInit.COMPACTED_DEEPSLATE.get(), "Compacted Deepslate");
+        add(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get(), "Compacted Cobbled Deepslate");
     }
 }

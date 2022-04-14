@@ -11,6 +11,7 @@ package com.corespace.asp3x.compactium.core.init;
 public final class TagInit {
     public static final class Blocks {
         public static final TagKey<Block> COMPACTIUM_RESOURCE = tag("compactium_resource");
+        public static final TagKey<Block> COMPACTED_BLOCKS = tag("compacted_blocks");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Compactium.MOD_ID, name));

@@ -7,6 +7,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+import java.util.Objects;
+
 public class ModLootTableProvider extends BaseLootTableProvider {
 
     public ModLootTableProvider(DataGenerator generator) {
@@ -25,12 +27,12 @@ public class ModLootTableProvider extends BaseLootTableProvider {
     }
 
     protected void silkTouch(Block block, Item item, int min, int max) {
-        add(block, createSilkTouchTable(block.getRegistryName().getPath(),
+        add(block, createSilkTouchTable(Objects.requireNonNull(block.getRegistryName()).getPath(),
                 block, item, min, max));
     }
 
     protected void dropSelf(Block block) {
-        add(block, createSimpleTable(block.getRegistryName().getPath(), block));
+        add(block, createSimpleTable(Objects.requireNonNull(block.getRegistryName()).getPath(), block));
     }
 
 }

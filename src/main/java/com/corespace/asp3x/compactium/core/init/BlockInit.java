@@ -54,6 +54,20 @@ public class BlockInit {
                     .sound(SoundType.STONE)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
 
+    public static final RegistryObject<Block> COMPACTED_DEEPSLATE = register("compacted_deepslate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
+                    .requiresCorrectToolForDrops()
+                    .strength(4.5f)
+                    .sound(SoundType.DEEPSLATE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
+
+    public static final RegistryObject<Block> COMPACTED_COBBLED_DEEPSLATE = register("compacted_cobbled_deepslate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
+                    .requiresCorrectToolForDrops()
+                    .strength(4.5f)
+                    .sound(SoundType.DEEPSLATE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
+
     /* Register Logic for the Block and Block Item */
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
         return BLOCKS.register(name, block);

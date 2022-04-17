@@ -23,6 +23,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(TagInit.Blocks.COMPACTED_BLOCKS).add(BlockInit.COMPACTED_COBBLESTONE.get());
         tag(TagInit.Blocks.COMPACTED_BLOCKS).add(BlockInit.COMPACTED_DEEPSLATE.get());
         tag(TagInit.Blocks.COMPACTED_BLOCKS).add(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get());
+        tag(TagInit.Blocks.COMPACTED_BLOCKS).add(BlockInit.COMPACTED_DIRT.get());
     }
 
 }

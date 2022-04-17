@@ -5,7 +5,6 @@ import com.corespace.asp3x.compactium.core.init.BlockInit;
 import com.corespace.asp3x.compactium.core.init.TagInit;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModBlockTagsProvider extends BlockTagsProvider {
@@ -16,8 +15,15 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags() {
+        // adding resources to tag
         tag(TagInit.Blocks.COMPACTIUM_RESOURCE).add(BlockInit.COMPACTIUM_ORE.get());
         tag(TagInit.Blocks.COMPACTIUM_RESOURCE).add(BlockInit.COMPACTIUM_DEEPSLATE_ORE.get());
+
+        // adding Compacted blocks to tag
+        tag(TagInit.Blocks.COMPACTED_BLOCKS).add(BlockInit.COMPACTED_COBBLESTONE.get());
+        tag(TagInit.Blocks.COMPACTED_BLOCKS).add(BlockInit.COMPACTED_DEEPSLATE.get());
+        tag(TagInit.Blocks.COMPACTED_BLOCKS).add(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get());
+        tag(TagInit.Blocks.COMPACTED_BLOCKS).add(BlockInit.COMPACTED_DIRT.get());
     }
 
 }

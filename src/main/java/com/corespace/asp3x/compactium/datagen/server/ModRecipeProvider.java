@@ -72,6 +72,16 @@ public class ModRecipeProvider extends RecipeProvider {
                         Objects.requireNonNull(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get().getRegistryName()).getPath() + "_from_" +
                                 Objects.requireNonNull(Blocks.COBBLED_DEEPSLATE.getRegistryName()).getPath()));
 
+        // add crafting recipe for compacted_dirt from dirt
+        ShapedRecipeBuilder.shaped(BlockInit.COMPACTED_DIRT.get().asItem())
+                .define('#', Blocks.DIRT.asItem())
+                .pattern("###").pattern("###").pattern("###")
+                .unlockedBy("has_" + Objects.requireNonNull(BlockInit.COMPACTED_DIRT.get().getRegistryName()).getPath(),
+                        has(BlockInit.COMPACTED_DIRT.get().asItem()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Objects.requireNonNull(BlockInit.COMPACTED_DIRT.get().getRegistryName()).getPath() + "_from_" +
+                        Objects.requireNonNull(Blocks.DIRT.getRegistryName()).getPath()));
+
         // Crafting Recipes Shapeless
         // add crafting recipe for compactium_ingot from compactium_block
         ShapelessRecipeBuilder.shapeless(ItemInit.COMPACTIUM_INGOT.get(), 9)
@@ -109,6 +119,7 @@ public class ModRecipeProvider extends RecipeProvider {
                         Blocks.DEEPSLATE.getRegistryName().getPath() + "_from_" +
                         Objects.requireNonNull(BlockInit.COMPACTED_DEEPSLATE.get().getRegistryName()).getPath()));
 
+        // add crafting recipe for cobbled_deepslate from compacted_cobbled_deepslate
         ShapelessRecipeBuilder.shapeless(Blocks.COBBLED_DEEPSLATE.asItem(), 9)
                 .requires(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get().asItem())
                 .unlockedBy("has_" + Blocks.COBBLED_DEEPSLATE.getRegistryName().getPath(),
@@ -116,6 +127,15 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(consumer, new ResourceLocation(Compactium.MOD_ID,
                         Blocks.COBBLED_DEEPSLATE.getRegistryName().getPath() + "_from_" +
                         Objects.requireNonNull(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get().getRegistryName()).getPath()));
+
+        // add crafting recipe for dirt from compacted_dirt
+        ShapelessRecipeBuilder.shapeless(Blocks.DIRT.asItem(), 9)
+                .requires(BlockInit.COMPACTED_DIRT.get().asItem())
+                .unlockedBy("has_" + Blocks.DIRT.getRegistryName().getPath(),
+                        has(Blocks.DIRT.asItem()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Blocks.DIRT.getRegistryName().getPath() + "_from_" +
+                        Objects.requireNonNull(BlockInit.COMPACTED_DIRT.get().getRegistryName()).getPath()));
 
         // Smelting Recipes
         // add smelting recipe for compactium_ingot from compactium_ore

@@ -30,5 +30,6 @@ public class ModEnUsProvider extends LanguageProvider {
         add(BlockInit.COMPACTED_COBBLESTONE.get(), "Compacted Cobblestone");
         add(BlockInit.COMPACTED_DEEPSLATE.get(), "Compacted Deepslate");
         add(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get(), "Compacted Cobbled Deepslate");
+        add(BlockInit.COMPACTED_DIRT.get(), "Compacted Dirt");
     }
 }

@@ -20,5 +20,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(BlockInit.COMPACTED_COBBLESTONE.get());
         simpleBlock(BlockInit.COMPACTED_DEEPSLATE.get());
         simpleBlock(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get());
+        simpleBlock(BlockInit.COMPACTED_DIRT.get());
     }
 }

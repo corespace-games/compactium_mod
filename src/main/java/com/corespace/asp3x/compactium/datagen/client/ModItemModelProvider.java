@@ -44,6 +44,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(BlockInit.COMPACTED_COBBLESTONE.get().asItem());
         simpleBlockItem(BlockInit.COMPACTED_DEEPSLATE.get().asItem());
         simpleBlockItem(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get().asItem());
+        simpleBlockItem(BlockInit.COMPACTED_DIRT.get().asItem());
 
         oneLayerItem(ItemInit.COMPACTIUM_RAW.get());
         oneLayerItem(ItemInit.COMPACTIUM_INGOT.get());

@@ -8,8 +8,10 @@
   "block.compactium.compactium_block": "Compactium Block",
   "block.compactium.compactium_deepslate_ore": "Compactium Tiefenschiefer Erz",
   "block.compactium.compactium_ore": "Compactium Erz",
+  "item.compactium.compactium_dust": "Compactium Staub",
   "item.compactium.compactium_ingot": "Compactium Barren",
   "item.compactium.compactium_nugget": "Compactium Klumpen",
   "item.compactium.compactium_raw": "Rohes Compactium",
+  "item.compactium.enriched_coal": "Angereicherte Kohle",
   "itemGroup.compactium": "Compactium Mod"
 }

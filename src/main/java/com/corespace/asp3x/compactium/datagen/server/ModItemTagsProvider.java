@@ -20,6 +20,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(TagInit.Items.COMPACTIUM_RESOURCE).add(ItemInit.COMPACTIUM_RAW.get());
         tag(TagInit.Items.COMPACTIUM_RESOURCE).add(ItemInit.COMPACTIUM_INGOT.get());
         tag(TagInit.Items.COMPACTIUM_RESOURCE).add(ItemInit.COMPACTIUM_NUGGET.get());
+        tag(TagInit.Items.COMPACTIUM_RESOURCE).add(ItemInit.COMPACTIUM_DUST.get());
     }
 
 }

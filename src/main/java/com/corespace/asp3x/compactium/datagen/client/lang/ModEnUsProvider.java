@@ -22,6 +22,8 @@ public class ModEnUsProvider extends LanguageProvider {
         add(ItemInit.COMPACTIUM_INGOT.get(), "Compactium Ingot");
         add(ItemInit.COMPACTIUM_RAW.get(), "Compactium Raw");
         add(ItemInit.COMPACTIUM_NUGGET.get(), "Compactium Nugget");
+        add(ItemInit.COMPACTIUM_DUST.get(), "Compactium Dust");
+        add(ItemInit.ENRICHED_COAL.get(), "Enriched Coal");
 
         // Blocks
         add(BlockInit.COMPACTIUM_ORE.get(), "Compactium Ore");

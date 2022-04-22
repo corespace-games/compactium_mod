@@ -54,5 +54,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         oneLayerItem(ItemInit.COMPACTIUM_RAW.get());
         oneLayerItem(ItemInit.COMPACTIUM_INGOT.get());
         oneLayerItem(ItemInit.COMPACTIUM_NUGGET.get());
+        oneLayerItem(ItemInit.COMPACTIUM_DUST.get());
+        oneLayerItem(ItemInit.ENRICHED_COAL.get());
     }
 }

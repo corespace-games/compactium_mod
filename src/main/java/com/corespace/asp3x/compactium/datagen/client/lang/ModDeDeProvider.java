@@ -19,6 +19,8 @@ public class ModDeDeProvider extends LanguageProvider{
         add(ItemInit.COMPACTIUM_INGOT.get(), "Compactium Barren");
         add(ItemInit.COMPACTIUM_RAW.get(), "Rohes Compactium");
         add(ItemInit.COMPACTIUM_NUGGET.get(), "Compactium Klumpen");
+        add(ItemInit.COMPACTIUM_DUST.get(), "Compactium Staub");
+        add(ItemInit.ENRICHED_COAL.get(), "Angereicherte Kohle");
 
         // Blocks
         add(BlockInit.COMPACTIUM_ORE.get(), "Compactium Erz");

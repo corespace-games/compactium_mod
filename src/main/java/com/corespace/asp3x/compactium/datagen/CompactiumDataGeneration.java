@@ -5,10 +5,7 @@ import com.corespace.asp3x.compactium.datagen.client.ModBlockStateProvider;
 import com.corespace.asp3x.compactium.datagen.client.ModItemModelProvider;
 import com.corespace.asp3x.compactium.datagen.client.lang.ModDeDeProvider;
 import com.corespace.asp3x.compactium.datagen.client.lang.ModEnUsProvider;
-import com.corespace.asp3x.compactium.datagen.server.ModBlockTagsProvider;
-import com.corespace.asp3x.compactium.datagen.server.ModItemTagsProvider;
-import com.corespace.asp3x.compactium.datagen.server.ModLootTableProvider;
-import com.corespace.asp3x.compactium.datagen.server.ModRecipeProvider;
+import com.corespace.asp3x.compactium.datagen.server.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,7 +31,8 @@ public class CompactiumDataGeneration {
             ModBlockTagsProvider blockTags = new ModBlockTagsProvider(generator, helper);
 
             // Server Data Generation
-            generator.addProvider(new ModRecipeProvider(generator));
+            generator.addProvider(new ModCraftingRecipeProvider(generator));
+            generator.addProvider(new ModSmeltingRecipeProvider(generator));
             generator.addProvider(blockTags);
             generator.addProvider(new ModItemTagsProvider(generator, blockTags, helper));
             generator.addProvider(new ModLootTableProvider(generator));

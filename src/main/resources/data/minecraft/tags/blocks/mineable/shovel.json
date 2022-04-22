@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "compactium:compacted_dirt"
+    "compactium:compacted_dirt",
+    "compactium:compacted_sand"
   ]
 }

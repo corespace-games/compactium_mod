@@ -75,6 +75,20 @@ public class BlockInit {
                     .sound(SoundType.ROOTED_DIRT)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
 
+    public static final RegistryObject<Block> COMPACTED_SAND = register("compacted_sand",
+            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND)
+                    .requiresCorrectToolForDrops()
+                    .strength(4.5f)
+                    .sound(SoundType.SAND)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
+
+    public static final RegistryObject<Block> COMPACTED_STONE = register("compacted_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(4.5f)
+                    .sound(SoundType.STONE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
+
     /* Register Logic for the Block and Block Item */
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
         return BLOCKS.register(name, block);

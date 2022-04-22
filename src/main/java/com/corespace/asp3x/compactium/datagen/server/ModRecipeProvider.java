@@ -82,6 +82,27 @@ public class ModRecipeProvider extends RecipeProvider {
                         Objects.requireNonNull(BlockInit.COMPACTED_DIRT.get().getRegistryName()).getPath() + "_from_" +
                         Objects.requireNonNull(Blocks.DIRT.getRegistryName()).getPath()));
 
+        // add crafting recipe for compacted_sand from sand
+        ShapedRecipeBuilder.shaped(BlockInit.COMPACTED_SAND.get().asItem())
+                .define('#', Blocks.SAND.asItem())
+                .pattern("###").pattern("###").pattern("###")
+                .unlockedBy("has_" + Objects.requireNonNull(BlockInit.COMPACTED_SAND.get().getRegistryName()).getPath(),
+                        has(BlockInit.COMPACTED_SAND.get().asItem()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Objects.requireNonNull(BlockInit.COMPACTED_SAND.get().getRegistryName()).getPath() + "_from_" +
+                                Objects.requireNonNull(Blocks.SAND.getRegistryName()).getPath()));
+
+        // add crafting recipe for compacted_stone from stone
+        ShapedRecipeBuilder.shaped(BlockInit.COMPACTED_STONE.get().asItem())
+                .define('#', Blocks.STONE.asItem())
+                .pattern("###").pattern("###").pattern("###")
+                .unlockedBy("has_" + Objects.requireNonNull(BlockInit.COMPACTED_STONE.get().getRegistryName()).getPath(),
+                        has(BlockInit.COMPACTED_STONE.get().asItem()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Objects.requireNonNull(BlockInit.COMPACTED_STONE.get().getRegistryName()).getPath() + "_from_" +
+                                Objects.requireNonNull(Blocks.STONE.getRegistryName()).getPath()));
+
+
         // Crafting Recipes Shapeless
         // add crafting recipe for compactium_ingot from compactium_block
         ShapelessRecipeBuilder.shapeless(ItemInit.COMPACTIUM_INGOT.get(), 9)
@@ -136,6 +157,25 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(consumer, new ResourceLocation(Compactium.MOD_ID,
                         Blocks.DIRT.getRegistryName().getPath() + "_from_" +
                         Objects.requireNonNull(BlockInit.COMPACTED_DIRT.get().getRegistryName()).getPath()));
+
+        // add crafting recipe for sand from compacted_sand
+        ShapelessRecipeBuilder.shapeless(Blocks.SAND.asItem(), 9)
+                .requires(BlockInit.COMPACTED_SAND.get().asItem())
+                .unlockedBy("has_" + Blocks.DIRT.getRegistryName().getPath(),
+                        has(Blocks.SAND.asItem()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Blocks.SAND.getRegistryName().getPath() + "_from_" +
+                                Objects.requireNonNull(BlockInit.COMPACTED_SAND.get().getRegistryName()).getPath()));
+
+        // add crafting recipe for stone from compacted_stone
+        ShapelessRecipeBuilder.shapeless(Blocks.STONE.asItem(), 9)
+                .requires(BlockInit.COMPACTED_STONE.get().asItem())
+                .unlockedBy("has_" + Blocks.DIRT.getRegistryName().getPath(),
+                        has(Blocks.STONE.asItem()))
+                .save(consumer, new ResourceLocation(Compactium.MOD_ID,
+                        Blocks.STONE.getRegistryName().getPath() + "_from_" +
+                                Objects.requireNonNull(BlockInit.COMPACTED_STONE.get().getRegistryName()).getPath()));
+
 
         // Smelting Recipes
         // add smelting recipe for compactium_ingot from compactium_ore

@@ -4,6 +4,8 @@
     "compactium:compacted_cobblestone",
     "compactium:compacted_deepslate",
     "compactium:compacted_cobbled_deepslate",
-    "compactium:compacted_dirt"
+    "compactium:compacted_dirt",
+    "compactium:compacted_stone",
+    "compactium:compacted_sand"
   ]
 }

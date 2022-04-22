@@ -28,5 +28,7 @@ public class ModDeDeProvider extends LanguageProvider{
         add(BlockInit.COMPACTED_DEEPSLATE.get(), "Verdichtete Tiefenschiefer");
         add(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get(), "Verdichtete Bruchstein Tiefenschiefer");
         add(BlockInit.COMPACTED_DIRT.get(), "Verdichtete Dreck");
+        add(BlockInit.COMPACTED_SAND.get(), "Verdichteter Sand");
+        add(BlockInit.COMPACTED_STONE.get(), "Verdichteter Stein");
     }
 }

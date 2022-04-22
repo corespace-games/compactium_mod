@@ -10,6 +10,8 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
+import java.util.Objects;
+
 public class ModItemModelProvider extends ItemModelProvider {
 
     public ModItemModelProvider(DataGenerator generator, ExistingFileHelper helper) {
@@ -17,23 +19,24 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     protected void simpleBlockItem(Item item) {
-        getBuilder(item.getRegistryName().toString())
+        getBuilder(Objects.requireNonNull(item.getRegistryName()).toString())
                 .parent(getExistingFile(modLoc("block/" + item.getRegistryName().getPath())));
     }
 
     protected void oneLayerItem(Item item, ResourceLocation texture) {
         ResourceLocation itemTexture = new ResourceLocation(texture.getNamespace(), "item/" + texture.getPath());
         if (existingFileHelper.exists(itemTexture, PackType.CLIENT_RESOURCES, ".png", "textures")) {
-            getBuilder(item.getRegistryName().getPath())
+            getBuilder(Objects.requireNonNull(item.getRegistryName()).getPath())
                     .parent(getExistingFile(mcLoc("item/generated")))
                     .texture("layer0", itemTexture);
         } else {
-            System.out.println("Texture for " + item.getRegistryName().toString() + " not present at " + itemTexture.toString());
+            // removed itemTexture.toString()
+            System.out.println("Texture for " + item.getRegistryName() + " not present at " + itemTexture);
         }
     }
 
     protected void oneLayerItem(Item item) {
-        oneLayerItem(item, item.getRegistryName());
+        oneLayerItem(item, Objects.requireNonNull(item.getRegistryName()));
     }
 
     @Override
@@ -45,6 +48,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(BlockInit.COMPACTED_DEEPSLATE.get().asItem());
         simpleBlockItem(BlockInit.COMPACTED_COBBLED_DEEPSLATE.get().asItem());
         simpleBlockItem(BlockInit.COMPACTED_DIRT.get().asItem());
+        simpleBlockItem(BlockInit.COMPACTED_SAND.get().asItem());
+        simpleBlockItem(BlockInit.COMPACTED_STONE.get().asItem());
 
         oneLayerItem(ItemInit.COMPACTIUM_RAW.get());
         oneLayerItem(ItemInit.COMPACTIUM_INGOT.get());

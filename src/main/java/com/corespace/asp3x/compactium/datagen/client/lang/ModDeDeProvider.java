@@ -22,6 +22,9 @@ public class ModDeDeProvider extends LanguageProvider{
         add(ItemInit.COMPACTIUM_DUST.get(), "Compactium Staub");
         add(ItemInit.ENRICHED_COAL.get(), "Angereicherte Kohle");
 
+        // Block Entity
+        add(BlockInit.ENERGY_GENERATOR_BASIC.get(), "Einfacher Strom Generator");
+
         // Blocks
         add(BlockInit.COMPACTIUM_ORE.get(), "Compactium Erz");
         add(BlockInit.COMPACTIUM_DEEPSLATE_ORE.get(), "Compactium Tiefenschiefer Erz");

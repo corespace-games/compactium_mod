@@ -25,6 +25,9 @@ public class ModEnUsProvider extends LanguageProvider {
         add(ItemInit.COMPACTIUM_DUST.get(), "Compactium Dust");
         add(ItemInit.ENRICHED_COAL.get(), "Enriched Coal");
 
+        // Block Entity
+        add(BlockInit.ENERGY_GENERATOR_BASIC.get(), "Basic Energy Generator");
+
         // Blocks
         add(BlockInit.COMPACTIUM_ORE.get(), "Compactium Ore");
         add(BlockInit.COMPACTIUM_DEEPSLATE_ORE.get(), "Compactium Deepslate Ore");

@@ -24,6 +24,7 @@ public class ModLootTableProvider extends BaseLootTableProvider {
         dropSelf(BlockInit.COMPACTED_DIRT.get());
         dropSelf(BlockInit.COMPACTED_SAND.get());
         dropSelf(BlockInit.COMPACTED_STONE.get());
+        dropSelf(BlockInit.ENERGY_GENERATOR_BASIC.get());
 
         silkTouch(BlockInit.COMPACTIUM_ORE.get(), ItemInit.COMPACTIUM_RAW.get(), 1, 4);
         silkTouch(BlockInit.COMPACTIUM_DEEPSLATE_ORE.get(), ItemInit.COMPACTIUM_RAW.get(), 1, 4);

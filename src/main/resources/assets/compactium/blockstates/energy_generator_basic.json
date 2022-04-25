@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "compactium:block/energy_generator_basic" },
+    "facing=east": { "model": "compactium:block/energy_generator_basic", "y": 90 },
+    "facing=south": { "model": "compactium:block/energy_generator_basic", "y": 180 },
+    "facing=west": { "model": "compactium:block/energy_generator_basic", "y": 270 }
+  }
+}

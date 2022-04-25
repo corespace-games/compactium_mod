@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [6, 6],
 	"textures": {
-		"0": "designs:models/generator/exported/generator_texture_atlas_bck",
-		"particle": "designs:models/generator/exported/generator_texture_atlas_bck"
+		"0": "compactium:machines/generator_texture_atlas",
+		"particle": "minecraft:block/iron_block"
 	},
 	"elements": [
 		{

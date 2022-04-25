@@ -50,6 +50,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(BlockInit.COMPACTED_DIRT.get().asItem());
         simpleBlockItem(BlockInit.COMPACTED_SAND.get().asItem());
         simpleBlockItem(BlockInit.COMPACTED_STONE.get().asItem());
+        simpleBlockItem(BlockInit.ENERGY_GENERATOR_BASIC.get().asItem());
 
         oneLayerItem(ItemInit.COMPACTIUM_RAW.get());
         oneLayerItem(ItemInit.COMPACTIUM_INGOT.get());

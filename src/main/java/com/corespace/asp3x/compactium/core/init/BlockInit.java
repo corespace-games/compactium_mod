@@ -1,10 +1,12 @@
 package com.corespace.asp3x.compactium.core.init;
 
 import com.corespace.asp3x.compactium.Compactium;
+import com.corespace.asp3x.compactium.core.block.custom.EnergyGenerator;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -87,6 +89,12 @@ public class BlockInit {
                     .requiresCorrectToolForDrops()
                     .strength(4.5f)
                     .sound(SoundType.STONE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
+
+    public static final RegistryObject<Block> ENERGY_GENERATOR_BASIC = register("energy_generator_basic",
+            () -> new EnergyGenerator(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_GRAY)
+                    .strength(2.5f)
+                    .sound(SoundType.METAL)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Compactium.COMPACTIUM_TAB)));
 
     /* Register Logic for the Block and Block Item */

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "compactium:stone_from_compacted_stone"
+    ]
+  },
+  "criteria": {
+    "has_dirt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "compactium:stone_from_compacted_stone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dirt",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.common.extensions.IForgeBlockState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.stream.Stream;
@@ -25,15 +26,15 @@ public class EnergyGenerator extends Block {
     }
 
     // pos, vertical, pos, depth, height, width
-    private static final VoxelShape SHAPE = Block.box(0, 0, 2, 16, 14, 14);
+    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 14, 16);
 
-    @NotNull
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE;
     }
 
     /* FACING */
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
@@ -51,8 +52,9 @@ public class EnergyGenerator extends Block {
         return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
 
+    @NotNull
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder){
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(FACING);
     }
 }

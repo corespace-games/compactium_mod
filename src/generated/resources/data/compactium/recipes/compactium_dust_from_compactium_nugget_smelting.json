@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "compactium:compactium_nugget"
-  },
-  "result": "compactium:compactium_dust",
-  "experience": 1.0,
-  "cookingtime": 100
-}

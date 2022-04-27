@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "compactium:compactium_raw",
-    "compactium:compactium_ingot",
-    "compactium:compactium_nugget",
-    "compactium:compactium_dust"
-  ]
-}

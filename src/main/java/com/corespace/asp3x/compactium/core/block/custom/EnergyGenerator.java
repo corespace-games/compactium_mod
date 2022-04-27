@@ -24,7 +24,8 @@ public class EnergyGenerator extends Block {
         super(properties);
     }
 
-    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 14, 16);
+    // pos, pos, pos, depth, height, width
+    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 14, 14);
 
     @NotNull
     @Override
